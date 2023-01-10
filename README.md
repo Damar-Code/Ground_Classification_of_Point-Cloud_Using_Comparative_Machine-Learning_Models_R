@@ -7,8 +7,7 @@ Builing Ground Classification model in this study are using 19 predictors. There
 
 In order to obtain robust models, there is a comparison of five models, which is C5.0, GBM, SVM, KNN, and Ensemble. There are around 200,000 point cloud as a dataset, which is 70% for training and 30% for testing. Meanwhile, in the validation phase, there are two steps: first, validation using a testing dataset and second, revalidating the models in landscape scale using actual ground dataset.
 
-
-![Flow Chart_Ground Classification](https://user-images.githubusercontent.com/60123331/211553713-941a7249-f77a-4dbe-bcf9-40de2c9da345.png)
+![Flow Chart_Ground Classification](https://user-images.githubusercontent.com/60123331/211615140-18bb2de3-67f4-4409-9509-a17b6647db22.png)
 
 Figure 1. Workflow of Building Ground Classification Model Using Machine Learning
 
@@ -36,17 +35,29 @@ Figure 4. Variable Importance
 ![model_comparison - resize](https://user-images.githubusercontent.com/60123331/211583738-396298ab-22b7-4fe9-85da-363450b5173c.png)
 
 Figure 5. Accuracy and Kappa
+Clearly see that how the algorithms performed in terms of accuracy and kappa. The C5.0 model appears to be the be best performing model overall because of the high accuracy and Kappa. Either way, there are second validation to make final decision on which model will have best peformance.
 
 
-![Sampling MAPE - Copy](https://user-images.githubusercontent.com/60123331/211584330-85584766-20e6-4519-bf7c-6542a35fc51b.png)
 
+## Second Validation
 
+Second validation done by MAPE analysis of model impelementation in new dataset with the bigger area scale. Cross section below shows how the model classified the ground and nonground point cloud. Mostly the model are underestimated which mean some point cloud that should be classify as a ground, instead a be non ground. Root cause of that underestimating might derive by the distribution of the number of ground point cloud are way less than the nonground point cloud (vegetation). Usually forest area will lacking of ground point cloud becasue the point cloud cannot penetrate untill touch the ground because of the canopy.
 
 ![cross section map](https://user-images.githubusercontent.com/60123331/211581039-c105c088-d344-4932-a4ea-5d374087222f.png)
 
+MAPE value from each model are got from its differences value between the actual ground data. It means the differences between elevation value. Sampling point distribution for MAPE analysis are using purposive sampling technique, focused on abnormality area with some outlier are there. The outliers it self are clearly visible from the Digital Elevation Model Map below
 
-![comparison - resize](https://user-images.githubusercontent.com/60123331/211584576-d4b8982f-8e68-445f-b488-7925702b8631.png)
+![Sampling MAPE - Copy](https://user-images.githubusercontent.com/60123331/211584330-85584766-20e6-4519-bf7c-6542a35fc51b.png)
+
+Each models performance clearly seen from the digital elevation model below. 
+
+
+![comparison](https://user-images.githubusercontent.com/60123331/211609241-108e1a09-03a0-4135-9691-6cbf43574c33.png)
+
+
+![MAPE](https://user-images.githubusercontent.com/60123331/211611038-a7ab234e-dffc-4b08-bbca-967d906473a1.png)
+
+
 
 ## CONCLUSION
 
-## REFERECES
