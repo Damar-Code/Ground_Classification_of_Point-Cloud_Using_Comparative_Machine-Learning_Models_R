@@ -5,6 +5,17 @@ Ground Classification is fundamental step for impelementing LiDAR in Forest Inve
 ## METHODE
 Builing Ground Classification model in this study are using 19 predictors. There are 6 predictors originally from LiDAR it self, such as intensity, R, G, B, NIR, and scan angle. Moreover, to understand the terrain complexity there are additional geometrical features as the predictors, such as Zmin, slope, index, planar, 1st eigenvalue, 2nd eigenvalue, 3rd eigenvalue, sum Eigen, anisotropy, planarity, linearity, SV, and Sphericity.
 
+Geometric properties are useful for explaining the local geometry of points. These geometric features are nowadays widely applied in LiDAR data processing. It is aimed to improve the accuracy values by extracting these geometric features in multiple scales rather than on a single scale. Geometric features are calculated by the eigenvalues (λ1, λ2, λ3) of the eigenvectors (v1, v2, v3) derived from the covariance matrix of any point p of the point cloud:
+
+
+![covariance metrics - Copy](https://user-images.githubusercontent.com/60123331/211853261-115dcd72-6ce8-479a-8077-7c782bb67cd8.PNG)
+
+where p is the centroid of the support S. Many values are calculated using eigenvalues: thesum of eigenvalues, omnivariance, eigenentropy, anisotropy, planarity, linearity, surfacevariation, sphericity and verticality. Calculated values are normalized. Since the datasets used contained only geometric information (3D coordinates), only geometric features were used in the study 
+
+![assf](https://user-images.githubusercontent.com/60123331/211852844-e1ebc282-d8b5-4e98-982d-c29481d770dd.PNG)
+
+The relevant geometric properties of any point in the 3D point cloud were based on the support of the point. Support selection is an important issue as the distinctiveness of the geometric features depends on the relevant support considered for feature extraction.
+
 In order to obtain robust models, there is a comparison of five models, which is C5.0, GBM, SVM, KNN, and Ensemble. There are around 200,000 point cloud as a dataset, which is 70% for training and 30% for testing. Meanwhile, in the validation phase, there are two steps: first, validation using a testing dataset and second, revalidating the models in landscape scale using actual ground dataset.
 
 ![Flow Chart_Ground Classification](https://user-images.githubusercontent.com/60123331/211615140-18bb2de3-67f4-4409-9509-a17b6647db22.png)
