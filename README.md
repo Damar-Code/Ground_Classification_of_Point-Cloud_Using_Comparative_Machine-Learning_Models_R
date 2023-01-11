@@ -62,3 +62,7 @@ Figure 8. Models Peformance for Landscape Scale
 
 ## CONCLUSION
 Machine learnining are well proven for making ground classification models. Models quality improvement can be done by two ways: 1) increasing the number of training dataset in a complex terrain, and 2) take out the poor model peformance before make an ensamble model. Moreover, try to implement the another classifier model of machine learning.
+
+## REFERENCES
+- Atik, Muhammed Enes, Zaide Duran, and Dursun Zafer Seker. 2021. “Machine Learning-Based Supervised Classification of Point Clouds Using Multiscale Geometric Features.” ISPRS International Journal of Geo-Information. [doi: 10.3390/ijgi10030187](https://www.mendeley.com/catalogue/4476ecc9-d5f0-3af0-8eef-f4ca8a061bb2/?utm_source=desktop&utm_medium=1.19.4&utm_campaign=open_catalog&userDocumentId=%7B64628a51-8ea3-4821-89bd-b85d9e5e10c1%7D)
+
