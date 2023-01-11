@@ -35,29 +35,29 @@ Figure 4. Variable Importance
 ![model_comparison - resize](https://user-images.githubusercontent.com/60123331/211583738-396298ab-22b7-4fe9-85da-363450b5173c.png)
 
 Figure 5. Accuracy and Kappa
+
 Clearly see that how the algorithms performed in terms of accuracy and kappa. The C5.0 model appears to be the be best performing model overall because of the high accuracy and Kappa. Either way, there are second validation to make final decision on which model will have best peformance.
-
-
 
 ## Second Validation
 
-Second validation done by MAPE analysis of model impelementation in new dataset with the bigger area scale. Cross section below shows how the model classified the ground and nonground point cloud. Mostly the model are underestimated which mean some point cloud that should be classify as a ground, instead a be non ground. Root cause of that underestimating might derive by the distribution of the number of ground point cloud are way less than the nonground point cloud (vegetation). Usually forest area will lacking of ground point cloud becasue the point cloud cannot penetrate untill touch the ground because of the canopy.
+Second validation aims to assest the model prediction peformance on the landscape scale. Cross section below shows how the model classified the ground and nonground point cloud. Mostly the model are still having missed classification. Some point cloud that should be classified as a ground point cloud are classified to be an nonground point cloud and the oposite way as well. The Root cause it might derive by two possibility: 1) because the trainining dataset of ground and nonground point cloud is not in a equel number, and 2) The terrain compplexity of the training dataset still not enough. In ths study the training dataset are loceted on dense forest area it lead of lacking of ground point cloud because most of the point cloud are indered by the canopies.
 
 ![cross section map](https://user-images.githubusercontent.com/60123331/211581039-c105c088-d344-4932-a4ea-5d374087222f.png)
+
+Figure 6. Cross Section Map
 
 MAPE value from each model are got from its differences value between the actual ground data. It means the differences between elevation value. Sampling point distribution for MAPE analysis are using purposive sampling technique, focused on abnormality area with some outlier are there. The outliers it self are clearly visible from the Digital Elevation Model Map below
 
 ![Sampling MAPE - Copy](https://user-images.githubusercontent.com/60123331/211584330-85584766-20e6-4519-bf7c-6542a35fc51b.png)
 
-Each models performance clearly seen from the digital elevation model below. 
+Figure 7. Sampling Point Distribution for MAPE Assesment
 
+Each models performancein lendscape scale are represents from this figure below. The overall accuracy of the model is quite good basen on the MAPE value only SVM model have a poor prediction. Red box in the picture emphasize the example area with outlier or miss classification.
 
 ![comparison](https://user-images.githubusercontent.com/60123331/211609241-108e1a09-03a0-4135-9691-6cbf43574c33.png)
-
-
 ![MAPE](https://user-images.githubusercontent.com/60123331/211611038-a7ab234e-dffc-4b08-bbca-967d906473a1.png)
 
-
+Figure 8. Performance Comparison of Machine Learning Models for Landscape Scale
 
 ## CONCLUSION
-
+Machine learnining are well proven for making ground classification models. Models quality improvement can be done by increasing the number of training dataset in a complex terrain. Moreover, try to implement the another classifier model of machine learning
