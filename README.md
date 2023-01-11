@@ -65,4 +65,5 @@ Machine learnining are well proven for making ground classification models. Mode
 
 ## REFERENCES
 - Atik, Muhammed Enes, Zaide Duran, and Dursun Zafer Seker. 2021. “Machine Learning-Based Supervised Classification of Point Clouds Using Multiscale Geometric Features.” ISPRS International Journal of Geo-Information. [doi: 10.3390/ijgi10030187](https://www.mendeley.com/catalogue/4476ecc9-d5f0-3af0-8eef-f4ca8a061bb2/?utm_source=desktop&utm_medium=1.19.4&utm_campaign=open_catalog&userDocumentId=%7B64628a51-8ea3-4821-89bd-b85d9e5e10c1%7D)
+- Atik ME, Duran Z. An Efficient Ensemble Deep Learning Approach for Semantic Point Cloud Segmentation Based on 3D Geometric Features and Range Images. Sensors (Basel). 2022 Aug 18;22(16):6210. [doi: 10.3390/s22166210](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9416655/)
 
