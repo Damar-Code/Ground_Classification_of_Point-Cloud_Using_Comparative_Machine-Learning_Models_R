@@ -52,7 +52,8 @@ MAPE value from each model are got from its differences value between the actual
 
 Figure 7. Sampling Point Distribution for MAPE Assesment
 
-Each models performancein lendscape scale are represents from this figure below. The overall accuracy of the model is quite good basen on the MAPE value only SVM model have a poor prediction. Red box in the picture emphasize the example area with outlier or miss classification.
+Each models performance in lendscape scale are represents from this figure below. The overall accuracy of the model is quite good basen on the MAPE value only SVM model have a poor prediction. Red box in the picture emphasize the example area with outlier or miss classification. The Ensemble have lower peformance than C5.0 because the impact of the SVM model.
+
 
 ![comparison](https://user-images.githubusercontent.com/60123331/211609241-108e1a09-03a0-4135-9691-6cbf43574c33.png)
 ![MAPE](https://user-images.githubusercontent.com/60123331/211611038-a7ab234e-dffc-4b08-bbca-967d906473a1.png)
@@ -60,4 +61,4 @@ Each models performancein lendscape scale are represents from this figure below.
 Figure 8. Performance Comparison of Machine Learning Models for Landscape Scale
 
 ## CONCLUSION
-Machine learnining are well proven for making ground classification models. Models quality improvement can be done by increasing the number of training dataset in a complex terrain. Moreover, try to implement the another classifier model of machine learning
+Machine learnining are well proven for making ground classification models. Models quality improvement can be done by two ways: 1) increasing the number of training dataset in a complex terrain, and 2) take out the poor model peformance before make an ensamble model. Moreover, try to implement the another classifier model of machine learning.
